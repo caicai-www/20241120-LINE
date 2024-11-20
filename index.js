@@ -38,6 +38,6 @@ bot.on('postback', event => {
   event.reply('據說是postback啦 data內容是:' + event.postback.data)
 })
 
-bot.listen('/', 3000 || process.env.PORT, () => {
+bot.listen('/', process.env.PORT || 3000, () => {
   console.log('康達姆機器人啟動')
 })
