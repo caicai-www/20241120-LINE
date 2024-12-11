@@ -5,11 +5,11 @@ export default () => {
       type: 'box',
       layout: 'vertical',
       spacing: 'none',
-      action: {
-        type: 'message',
-        label: 'action',
-        text: 'hello'
-      },
+      // action: {
+      //   type: 'message',
+      //   label: 'action',
+      //   text: 'hello'
+      // },
       contents: [
         {
           type: 'image',
@@ -29,22 +29,24 @@ export default () => {
           size: 'xl',
           weight: 'bold',
           position: 'absolute',
-          offsetBottom: '30%',
-          offsetStart: '30%',
+          align: 'center',
+          offsetStart: 'xl',
+          offsetBottom: '35%',
+          offsetEnd: 'xl',
           color: '#ffffff'
         },
         {
           type: 'button',
           action: {
-            type: 'message',
-            label: '詳細資訊',
-            text: 'hello'
+            type: 'uri',
+            uri: 'https://www.zoo.gov.taipei/Default.aspx',
+            label: '詳細資訊'
           },
           position: 'absolute',
           offsetBottom: '5%',
           color: '#4f7c46',
           style: 'primary',
-          offsetEnd: '5%'
+          offsetEnd: '30%'
         }
       ],
       margin: 'none',

@@ -6,6 +6,10 @@ import commandFE from './commands/fe.js'
 import commandQR from './commands/qr.js'
 import commandTWGod from './commands/twgod.js'
 import commandZOOMap from './commands/zoo_map.js'
+import commandZOOTW from './commands/tw.js'
+import commandZOOKid from './commands/kids.js'
+import commandZooRainForest from './commands/rainforest.js'
+import commandZooAfrica from './commands/africa.js'
 
 const bot = linebot({
   channelId: process.env.CHANNEL_ID,
@@ -31,6 +35,14 @@ bot.on('message', event => {
       commandQR(event)
     } else if (event.message.text === 'zoo') {
       commandZOOMap(event)
+    } else if (event.message.text === '台灣動物區') {
+      commandZOOTW(event)
+    } else if (event.message.text === '兒童動物區') {
+      commandZOOKid(event)
+    } else if (event.message.text === '熱帶雨林區') {
+      commandZooRainForest(event)
+    } else if (event.message.text === '非洲動物區') {
+      commandZooAfrica(event)
     }
   } else if (event.message.type === 'location') {
     commandTWGod(event)
