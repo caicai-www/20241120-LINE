@@ -26,14 +26,6 @@ export default async event => {
           type: 'action',
           action: {
             type: 'message',
-            text: '大貓熊館',
-            label: '大貓熊館'
-          }
-        },
-        {
-          type: 'action',
-          action: {
-            type: 'message',
             text: '穿山甲館',
             label: '穿山甲館'
           }
@@ -84,6 +76,14 @@ export default async event => {
             type: 'message',
             text: '兩棲爬蟲動物館',
             label: '兩棲爬蟲動物館'
+          }
+        },
+        {
+          type: 'action',
+          action: {
+            type: 'message',
+            text: '企鵝館',
+            label: '企鵝館'
           }
         },
         {

@@ -15,8 +15,8 @@ export default async (event) => {
       const name = $(this).find('h4').text().trim()
       const url = $(this).attr('href')
       t.body.contents[0].url = img
-      t.body.contents[1].text = name
-      t.body.contents[2].action.uri = url
+      t.body.contents[2].text = name
+      t.body.contents[3].action.uri = url
       // console.log(name)
       courses.push(t)
     })

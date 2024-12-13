@@ -14,8 +14,8 @@ export default async (event) => {
       const name = $(this).find('h4').text()
       const url = $(this).attr('href')
       t.body.contents[0].url = img
-      t.body.contents[1].text = name
-      t.body.contents[2].action.uri = url
+      t.body.contents[2].text = name
+      t.body.contents[3].action.uri = url
       // console.log(url)
       courses.push(t)
     })
@@ -24,7 +24,7 @@ export default async (event) => {
     const result = await event.reply({
       type: 'flex',
       // 機器人回覆的預覽文字
-      altText: '台灣動物區',
+      altText: '熱帶雨林區',
       contents: {
         type: 'carousel',
         contents: courses

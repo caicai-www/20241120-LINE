@@ -10,6 +10,13 @@ import commandZOOTW from './commands/tw.js'
 import commandZOOKid from './commands/kids.js'
 import commandZooRainForest from './commands/rainforest.js'
 import commandZooAfrica from './commands/africa.js'
+import commandZooPangolin from './commands/pangolin.js'
+import commandZooDesert from './commands/desert.js'
+import commandZooAus from './commands/australia.js'
+import commandZooTemperate from './commands/temperate.js'
+import commandZooBird from './commands/bird.js'
+import commandZooAmphibians from './commands/amphibians.js'
+import commandZooPenguin from './commands/penguin.js'
 
 const bot = linebot({
   channelId: process.env.CHANNEL_ID,
@@ -43,6 +50,20 @@ bot.on('message', event => {
       commandZooRainForest(event)
     } else if (event.message.text === '非洲動物區') {
       commandZooAfrica(event)
+    } else if (event.message.text === '穿山甲館') {
+      commandZooPangolin(event)
+    } else if (event.message.text === '沙漠動物區') {
+      commandZooDesert(event)
+    } else if (event.message.text === '澳洲動物區') {
+      commandZooAus(event)
+    } else if (event.message.text === '溫帶動物區') {
+      commandZooTemperate(event)
+    } else if (event.message.text === '鳥園') {
+      commandZooBird(event)
+    } else if (event.message.text === '兩棲爬蟲動物館') {
+      commandZooAmphibians(event)
+    } else if (event.message.text === '企鵝館') {
+      commandZooPenguin(event)
     }
   } else if (event.message.type === 'location') {
     commandTWGod(event)

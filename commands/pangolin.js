@@ -5,7 +5,7 @@ import fs from 'node:fs'
 
 export default async (event) => {
   try {
-    const { data } = await axios.get('https://www.zoo.gov.taipei/News_Content.aspx?n=27AD3418659070A4&sms=589C9E9F5E8CEAE4&s=6F9CDDCD0BDE957D')
+    const { data } = await axios.get('https://www.zoo.gov.taipei/News_Content.aspx?n=0E2F1BDD15CF608D&sms=4B48AE9F06DCAA6F&s=A0E78E5E74C0C58A')
     const $ = cheerio.load(data)
     const courses = []
     $('.area-essay .image-column3').each(function () {
@@ -19,12 +19,10 @@ export default async (event) => {
       // console.log(url)
       courses.push(t)
     })
-    // console.log('cour: ' + courses)
 
     const result = await event.reply({
       type: 'flex',
-      // 機器人回覆的預覽文字
-      altText: '兒童動物區',
+      altText: '熱帶雨林室內館(穿山甲館)',
       contents: {
         type: 'carousel',
         contents: courses

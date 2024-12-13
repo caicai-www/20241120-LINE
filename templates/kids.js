@@ -24,15 +24,32 @@ export default () => {
           position: 'relative'
         },
         {
+          type: 'box',
+          layout: 'vertical',
+          contents: [],
+          position: 'absolute',
+          background: {
+            type: 'linearGradient',
+            angle: '0deg',
+            endColor: '#00000000',
+            startColor: '#00000099'
+          },
+          width: '100%',
+          height: '40%',
+          offsetBottom: '0px',
+          offsetStart: '0px',
+          offsetEnd: '0px'
+        },
+        {
           type: 'text',
           text: 'a_name_ch',
           size: 'xl',
           weight: 'bold',
           position: 'absolute',
           align: 'center',
-          offsetStart: 'xl',
-          offsetBottom: '35%',
-          offsetEnd: 'xl',
+          offsetStart: 'xxl',
+          offsetBottom: '25%',
+          offsetEnd: 'xs',
           color: '#ffffff'
         },
         {
@@ -44,7 +61,7 @@ export default () => {
           },
           position: 'absolute',
           offsetBottom: '5%',
-          color: '#4f7c46',
+          color: '#72c261',
           style: 'primary',
           offsetEnd: '30%'
         }
